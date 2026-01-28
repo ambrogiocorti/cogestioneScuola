@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portale Cogestione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="main-wrapper">
+        <div class="card-glass fade-in">      
+            <div id="login-view">
+                <div class="brand-header">
+                    <div class="logo-circle">🎓</div>
+                    <h1>Hub<span class="highlight">Cogestione</span></h1>
+                    <p class="subtitle">Consulta gli orari</p>
+                </div>
+
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <div class="input-with-icon">
+                            <input type="email" id="email" placeholder="nome.cognome@cogestione.it" required>
+                            <span class="icon-marker">✉️</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-with-icon">
+                            <input type="password" id="password" placeholder="••••••••" required>
+                            <span class="icon-marker">🔒</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Accedi</button>
+                </form>
+                <p id="error-message" class="error-text"></p>
+            </div>
+
+            <div id="dashboard-view" class="hidden">
+                <header class="dash-header">
+                    <div class="user-profile">
+                        <div class="avatar-circle" id="user-avatar"></div>
+                        <div class="user-info">
+                            <h2 id="student-name">Caricamento...</h2>
+                            <span class="badge-class" id="student-class">...</span>
+                        </div>
+                    </div>
+                    <button id="logout-btn" class="btn-ghost">Esci</button>
+                </header>
+
+                <div class="schedule-section">
+                    <div class="section-title">
+                        <h3>Il tuo programma</h3>
+                        <br>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Ora</th>
+                                    <th>Fascia</th>
+                                    <th>Aula</th>
+                                    <th>Attività</th>
+                                </tr>
+                            </thead>
+                            <tbody id="schedule-body">
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Hub Cogestione</p>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
